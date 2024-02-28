@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <title>Affitti appartamenti - Milano - Estate 2021</title> 
+    <!-- SCRIPT JS -->
+    <script type="text/javascript" src="js/article-methodology.js"></script>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.autocomplete.min.js"></script>
+    <script src="js/chart.bundle.js"></script>   
+    <script src="js/chart.bundle.min.js"></script>     
+    <script src="js/chart.js"></script>   
+    <script src="js/chart.min.js"></script>
+    <script src="js/functions.js"></script>         
+    <!-- SCRIPT CSS -->
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+  </head>
+  <body>
+    <div id='content'>
+      <div id='wline'></div>
+      <!--   CORPO DEL TESTO    -->
+      <div class='c2' id='title'>
+        <div id='topbar'></div>
+        <div>
+          <h1>Affitti appartamenti - Milano - Estate 2021</h1>
+          <!--<h2>Uno studio sulla popolarità dei calciatori</h2>-->
+          <hr>
+          <!--<p style='font-size:11pt; text-transform:uppercase; font-family:"Palatino Linotype", "Book Antiqua", serif;'>Di <b>Anna G., Fabio M., Letizia M.</b>-->
+          </p>
+          <ul class='horiz_menu'>
+            <li>
+              <div id="method_a" class='clicked' ><a href='#' onclick="Article()">Articolo</a></div>
+            </li>
+            <!--<li>
+              <div id="article_a" class='not_clicked'><a href='jupyter_notebook.html' >Notebook</a></div>
+            </li>-->
+          </ul>
+        </div>
+      </div>
+      <div id='article'>
+        <div class='c2'>
+          <div>
+            <h2>Premessa</h2>
+            <hr>
+            <p>Questa primavera mi sono ritrovato per la prima volta nella situazione di dover effettuare delle ricerche per affittare un appartamento a Milano. Negli anni precedenti da studente, difatti, sono sempre stato un pendolare, per cui la mia conoscenza a tal riguardo era pressoché nulla, mi basavo semplicemente sul sentito dire e raccontare dai vari amici, colleghi, compagni di università. Aver approcciato in prima persona il problema mi ha permesso di sviluppare una cultura sul tema, sulle varie valutazioni che si devono per forza di cose fare e - ahimé - su quanto siano costosi gli appartamenti in quel di Milano. La mia ricerca è iniziata a fine febbraio e si è protratta fino a giugno, quando ho finalmente trovato il bilocale che faceva per me.</p>
+			<p>Più volte ho cercato su Google frasi tipo "quanto spende un trentenne a milano", oppure "prezzo medio appartamenti milano", trovando spesso però risultati insoddisfacenti o troppo generici. Ho pensato dunque che sarebbe utile fornire un metro di paragone per poter stabilire che un certo appartamento, con certe caratteristiche, costa troppo oppure è a buon mercato. L'articolo si struttura in modo molto lineare, seguendo in qualche modo i ragionamenti che ho fatto durante i mesi di ricerca e ha lo scopo di dare informazioni riguardo il mercato degli affitti nel comune di Milano.
+			</p>
+            <br>
+          </div>
+        </div>
+        <div class='c1'>
+          <div>
+                   
+          <h2>Panoramica</h2>
+          
+		  <p>La prima domanda da farsi riguarda il tipo di appartamento. Nell'analisi abbiamo considerato monolocali, bilocali, trilocali e quadrilocali (escludendo dunque le stanze in appartamenti in condivisione con altre persone). Un giovane lavoratore potrebbe porsi di fronte alla scelta tra monolocale e bilocale. Nel concreto, a parità di prezzo, che differenze ci sono? Per farci una prima idea, analizziamo le distribuzioni dei metri quadri. </p>
+		  
+		  <div style="width:100%;text-align:center"><img src="charts/Boxplot_Mq-Tipologia.svg" /></div>
+		  
+		  <p>Come è naturale che sia, l'aggiunta di una camera comporta un aumento notevole dei metri quadri. Tuttavia, dal grafico riusciamo a capire quando un monolocale si può definire "grande" o "piccolo": la mediana si colloca intorno a 35mq, pochissimi superano i 50mq. I bilocali invece si posizionano logicamente più avanti: al di sotto dei 50mq un appartamento di questo tipo può definirsi "piccolo", mentre sopra i 75 inizia a diventare molto spazioso. Trilocali e quadrilocali, ossia appartamenti al più per famiglie o gruppi di coinquilini, si collocano rispettivamente tra 75 e 100mq e tra 100 e 150mq, con distribuzioni che diventano via via meno concentrate sulla mediana (c'è più varietà di appartamenti, in termini di metri quadri).</p>
+		  
+		  <div style="width:100%;text-align:center"><img src="charts/Histogram1.svg" /></div>
+		  
+		  <p>Un'analisi simile si può fare per quanto riguarda il prezzo delle varie tipologie di appartamenti (includendo le spese condominiali), che poi è il principale discriminante nel momento in cui si valuta un annuncio. I due grafici sopra e sotto mostrano le distribuzioni del prezzo, sia utilizzando istogrammi sia i boxplots. È facile osservare come la maggior parte dei monolocali si posizionino tra 500 e 1000€. I bilocali si distribuiscono tra 900 e 1300 euro. Al di sotto degli 800€ pertanto si può definire "conveniente" un alloggio di questo tipo. Salendo col numero di camere, la distribuzione diventa meno ripida e la varianza aumenta: la maggior parte dei trilocali costano tra 1200 e 2000 euro, dei quadrilocali tra 1500 e 2750.</p>
+		  
+		  <div style="width:100%;text-align:center"><img src="charts/Boxplot_Prezzo-Tipologia.svg" /></div>
+		  
+		  <p>Una comparazione tra monolocali e bilocali è riportata nella tabella sottostante. La maggior parte dei monolocali si trova nella fascia 600-800 euro; per avere un appartamento minimamente confortevole (almeno 30mq) occorre spendere in media più di 600 euro. Con la stessa cifra risulta molto difficile trovare un bilocale, e comunque si tratterebbe di un alloggio molto piccolo (meno di 50mq). Al di sopra dei 1200 euro si cominciano a trovare, con facilità, appartamenti molto confortevoli. Al crescere del prezzo, ovviamente, l'appartamento si avvicina al centro di Milano (identificato geograficamente nel Duomo).</p>
+		  
+		  <div style="width:100%;text-align:center"><img src="tables/tab1.png" /></div>         
+          
+		  <p>A scopo puramente esplorativo ci chiediamo a questo punto se sussista una relazione lineare tra il prezzo e la superficie in metri quadri. Le rette di regressione riportate negli scatterplot suddivisi per tipologia diventano man mano più ripide al crescere del numero di camere: ogni metro in più, si paga di più se si tratta di case più grandi. La relazione è più lineare in trilocali e quadrilocali, anche per via del a fatto che, come notato in precedenza, sussiste più varietà di metrature e la superficie ha un peso maggiore rispetto ai monolocali e bilocali, dove evidentemente sono altri fattori ad alzare ed abbassare il prezzo.</p>
+		  
+		  <div style="width:100%;text-align:center"><img src="charts/Scatterplot_Prezzo-Mq.svg" /></div>
+		  
+          </div>
+        </div>
+
+        <div class='c2'>
+        
+            <div>
+            <h2>Impatto sul prezzo delle varie caratteristiche</h2>
+            
+            <p>Di quanto aumenta il prezzo se l'appartamento dispone di ascensore, aria condizionata, terrazzo o altri "optional"? Proviamo a rispondere a questa domanda proponendo i seguenti grafici "barplot" in cui, per ciascuna categoria di alloggio, si riporta il prezzo totale (spese condominiali + prezzo di affitto) per appartamenti con e senza servizio aggiuntivo.</p>
+            
+            <div style="width:100%;text-align:center"><img src="charts/Barplot_Mediana-AriaCond.svg" /></div>
+            <br>
+            <div style="width:100%;text-align:center"><img src="charts/Barplot_Mediana-Ascensore.svg" /></div>
+            <br>
+            <div style="width:100%;text-align:center"><img src="charts/Barplot_Mediana-Riscaldamento.svg" /></div>
+            <br>
+            <div style="width:100%;text-align:center"><img src="charts/Barplot_Mediana-Terrazzo.svg" /></div>
+            
+            <p>L'aria condizionata ha sicuramente un impatto interessante su ciascuna tipologia di appartamento, tanto più visibile quanto più ampio l'alloggio. Trend opposto invece per il terrazzo. L'ascensore risulta significativo dai bilocali in poi (non influenza molto la mediana dei monolocali). Il riscaldamento centralizzato è un tema particolare, in quanto sembra non influire affatto tranne che sui quadrilocali; in effetti, possedere una caldaia autonoma, può risultare più comodo ma al tempo stesso comportare spese aggiuntive, portando dunque ad una compensazione tra le due cose e quindi ad un equilibrio nel prezzo.</p>
+            
+            <br>
+            
+            
+            
+            </div>
+        
+        </div>
+        
+        <div class='c1'>
+        
+            <div>
+            <h2>Analisi per quartieri</h2>
+            
+            <p>Un'altra questione inevitabile riguarda la zona ove alloggiare. La scelta anche in questo caso coinvolge diversi fattori, tra cui ad esempio la vicinanza al luogo di lavoro. In una città come Milano, tuttavia, ben collegata dai mezzi di trasporto, il prezzo rappresenta quasi sempre il principale parametro di riferimento, per cui nei grafici "lollipop" sottostanti abbiamo ordinato i quartieri di Milano dal più costoso al meno costoso.</p>
+            
+            <div style="width:100%;text-align:center"><img src="charts/Lollipop_Media-Zona.svg" /></div>
+            <br>
+            
+            <p>Stesso approccio, ma suddividendo anche per tipologia: si riportano i tre quartieri più e meno costosi.</p>
+            
+            <div style="width:100%;text-align:center"><img src="charts/Lollipop_Media-ZoneTopFlop.svg" /></div>
+            <br>
+            
+            
+            </div>
+        
+        </div>
+     
+      
+      <br><br>
+      
+    </div>
+    <script type="text/javascript" src="js/applicazione.js"></script>
+  </body>
+</html>
